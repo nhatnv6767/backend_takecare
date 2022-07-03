@@ -1,24 +1,23 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('allcodes', {
+    await queryInterface.createTable('doctor-clinic-specialties', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      key: {
-        type: Sequelize.STRING
+      doctorId: {
+        type: Sequelize.INTEGER,
       },
-      type: {
-        type: Sequelize.STRING
+
+      clinicId: {
+        type: Sequelize.INTEGER,
       },
-      valueEn: {
-        type: Sequelize.STRING
-      },
-      valueVi: {
-        type: Sequelize.STRING
+
+      specialtyId: {
+        type: Sequelize.INTEGER,
       },
 
       createdAt: {
@@ -32,6 +31,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('allcodes');
+    await queryInterface.dropTable('doctor-clinic-specialties');
   }
 };
