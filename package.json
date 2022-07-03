@@ -1,0 +1,36 @@
+{
+  "name": "17less",
+  "version": "1.0.0",
+  "description": "backend nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhatnv6767/17less.git"
+  },
+  "keywords": [
+    "fullstack",
+    "nodejs",
+    "express"
+  ],
+  "author": "bhnone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhatnv6767/17less/issues"
+  },
+  "homepage": "https://github.com/nhatnv6767/17less#readme",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "dotenv": "8.2.0",
+    "ejs": "3.1.5",
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "nodemon": "^2.0.7"
+  }
+}
