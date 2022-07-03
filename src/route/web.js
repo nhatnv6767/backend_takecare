@@ -9,6 +9,8 @@ let initWebRoutes = (app) => {
         return res.send("How about you today")
     })
 
+    router.get('/crud', homeController.getCRUD)
+
     return app.use("/", router)
 }
 
