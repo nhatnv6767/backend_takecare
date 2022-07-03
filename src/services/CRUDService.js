@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import db from "../models/index"
+import db from "../models/index";
 
 const salt = bcrypt.genSaltSync(10);
 
@@ -17,11 +17,11 @@ let createNewUser = (data) => {
                 phonenumber: data.phonenumber,
                 gender: data.gender === "1" ? true : false,
                 roleId: data.roleId
-            })
+            });
         } catch (e) {
             reject(e);
         }
-    })
+    });
 
 };
 
@@ -36,6 +36,21 @@ let hashUserPassword = (password) => {
     });
 };
 
+let getAllUser = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let users = db.User.findAll({
+                raw: true,
+            });
+
+            resolve(users);
+        } catch (e) {
+            reject(e);
+        }
+    });
+};
+
 module.exports = {
     createNewUser: createNewUser,
+    getAllUser: getAllUser,
 };
