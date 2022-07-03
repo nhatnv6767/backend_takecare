@@ -4,6 +4,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('dbtakecare', 'root', '', {
     host: 'localhost',
     dialect: "mysql",/* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
+    logging: false
 });
 
 let connectDB = async () => {
