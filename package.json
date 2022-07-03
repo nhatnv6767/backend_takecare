@@ -1,5 +1,5 @@
 {
-  "name": "17less",
+  "name": "backend-take-care",
   "version": "1.0.0",
   "description": "backend nodejs",
   "main": "server.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhatnv6767/17less.git"
+    "url": "git+https://github.com/nhatnv6767/backend_takecare.git"
   },
   "keywords": [
     "fullstack",
@@ -18,9 +18,9 @@
   "author": "bhnone",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nhatnv6767/17less/issues"
+    "url": "https://github.com/nhatnv6767/backend_takecare/issues"
   },
-  "homepage": "https://github.com/nhatnv6767/17less#readme",
+  "homepage": "https://github.com/nhatnv6767/backend_takecare#readme",
   "dependencies": {
     "body-parser": "1.19.0",
     "dotenv": "8.2.0",
