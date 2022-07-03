@@ -4,14 +4,8 @@
   "description": "backend nodejs",
   "main": "server.js",
   "scripts": {
-    "babel:node": "./node_modules/.bin/babel-node --presets=@babel/env",
-    "dev": "nodemon --exec npm run babel:node -- ./src/server.js",
-    "test": "mocha ./spec/**/*.spec.js -r @babel/register --opts spec/mocha.opts"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
   },
   "repository": {
     "type": "git",
