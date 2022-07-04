@@ -26,7 +26,7 @@ let handleGetAllUsers = async (req, res) => {
             errCode: 1,
             errMessage: "Missing required parameter",
             users: []
-        })
+        });
     }
 
     return res.status(200).json({
@@ -35,7 +35,12 @@ let handleGetAllUsers = async (req, res) => {
         users
     });
 };
+
+let handleCreateNewUser = async (req, res) => {
+
+};
 module.exports = {
     handleLogin: handleLogin,
     handleGetAllUsers: handleGetAllUsers,
+    handleCreateNewUser: handleCreateNewUser,
 };
