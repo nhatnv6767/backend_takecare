@@ -22,7 +22,7 @@ let handleUserLogin = (email, password) => {
                     if (check) {
                         userData.errCode = 0;
                         userData.errMessage = "OK";
-                        // delete password filed (API)
+                        // delete password field (API)
                         delete user.password;
                         userData.user = user;
                     } else {
@@ -34,13 +34,10 @@ let handleUserLogin = (email, password) => {
                     userData.errCode = 2;
                     userData.errMessage = `User's not found`;
                 }
-
-                resolve();
             } else {
                 // return error
                 userData.errCode = 1;
                 userData.errMessage = `Your Email isn't exist. Try again!`;
-                resolve(userData);
             }
             resolve(userData);
         } catch (e) {
@@ -49,15 +46,6 @@ let handleUserLogin = (email, password) => {
     });
 };
 
-let compareUserPassword = () => {
-    return new Promise((resolve, reject) => {
-        try {
-
-        } catch (e) {
-            reject(e);
-        }
-    });
-};
 
 let checkUserEmail = (userEmail) => {
     return new Promise(async (resolve, reject) => {
@@ -66,7 +54,7 @@ let checkUserEmail = (userEmail) => {
                 where: {email: userEmail}
             });
             if (user) {
-                resolve(user);
+                resolve(true);
             } else {
                 resolve(false);
             }
