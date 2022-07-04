@@ -9,18 +9,11 @@ let handleLogin = async (req, res) => {
             message: "Missing input parameters."
         });
     }
-    // check email exist
     let userData = await userService.handleUserLogin(email, password);
-
-    // compare password
-
-    // return userInfor
-
-    // access_token: JWT <json web token>
     return res.status(200).json({
         errCode: userData.errCode,
         message: userData.errMessage,
-        userData,
+        user: userData.user ? userData.user : {}
     });
 };
 module.exports = {
